@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model双向数据绑定</title>
+    <!-- // 导入vue包 -->
+    <script src="./lib/vue-2.6.10.js"></script>
+</head>
+<body>
+<!--    v-model 可以实现数据的双向绑定-->
+<!--    v-model 只能运用于表单元素中-->
+    <div id="app">
+        <h2>{{msg}}</h2>
+        <input type="text" v-model="msg">
+    </div>
+</body>
+<script>
+    // 创建vue实例
+    var vue = new Vue({
+        el: '#app',
+        data: {
+            msg:'Hello'
+        },
+        methods: {}
+    })
+</script>
+</html>

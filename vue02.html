@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/vue-2.6.10.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ message }}</p>
+    <!-- v-text 原样输出数据的内容-->
+    <p v-text="message1"></p>
+    <!-- v-html 可以输出html标签-->
+    <p v-html="message2"></p>
+
+    <!-- v-bind 绑定属性指令 简写方式 : -->
+    <!-- v-on 绑定事件指令 简写方式 @ -->
+    <input type="button" value="确定" :title="mytitle" @click="show">
+</div>
+</body>
+<script>
+   var vue = new Vue({
+        el:'#app',
+        data: {
+            message: 'Hello World',
+            message1: 'Hello World1',
+            message2: '<h1>Hello World2</h1>',
+            mytitle: '321'
+        },
+       methods: {
+            show : function () {
+                alert('Hello World')
+            }
+       }
+    })
+</script>
+</html>
