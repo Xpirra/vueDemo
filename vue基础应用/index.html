@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../lib/vue-2.6.10.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--    图片 -->
+    <div id="bag" :class="{burst: ended}" @click="punch"></div>
+    <!--    进度条 -->
+    <div id="bag-health">
+        <div :style="{width: health + '%'}"></div>
+    </div>
+    <!--    控制按钮 -->
+    <div id="controls">
+        <button @click="restart">重置</button>
+    </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
